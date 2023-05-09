@@ -32,13 +32,14 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Custom
-.DS_Store
-/db/PGSQL
-
 /public/packs
 /public/packs-test
 /node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Custom
+.DS_Store
+/db/PGSQL
+/vendor/the_role_api

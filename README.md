@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dumy App to test TheRole with Rails 7
 
-Things you may want to cover:
+### how to use
 
-* Ruby version
+```sh
+docker compose -f docker-compose.yml up
+docker compose exec rails bash
+```
 
-* System dependencies
+```sh
+cd ~
+gem install rails -v 6.1.7.3
+rails _6.1.7.3_ new rails6dummy
+```
 
-* Configuration
+```sh
+cd rails6dummy
+cd vendor
 
-* Database creation
+git clone https://github.com/TheRole/the_role_api.git
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+bundle install
+```

@@ -3,10 +3,21 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.1'
 
+# ~~~~~~~~~~~~~~~~~ TheRole ~~~~~~~~~~~~~~~~~
+gem 'devise', '4.9.2'
+
+gem 'pg', '1.5.3'
+# gem 'mysql2'
+gem 'sqlite3', '1.6.2'
+
+# RAILS_ENV=development bundle install
+gem 'the_role_api', path: 'vendor/the_role_api'
+
+# ~~~~~~~~~~~~~~~~~ TheRole ~~~~~~~~~~~~~~~~~
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
