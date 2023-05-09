@@ -1,0 +1,29 @@
+# gem install rails -v 6.1.7.3
+# rails _6.1.7.3_ new test_app
+# docker compose -f docker-compose.yml up
+# docker compose run rails  bash
+
+version: '3.9'
+
+name: rails6dummy
+
+services:
+  psql:
+    image: postgres:15.1-bullseye
+    user: root
+    environment:
+      POSTGRES_PASSWORD: qwerty
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./db/PGSQL:/var/lib/postgresql/data/pgdata
+
+  rails:
+    tty: true
+    stdin_open: true
+    image: iamteacher/rails7:latest
+    volumes:
+      - .:/home/lucky/rails6dummy
+    ports:
+      - 3000:3000
+    depends_on:
+      - psql
