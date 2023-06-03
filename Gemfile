@@ -11,12 +11,13 @@ gem 'pg', '1.5.3'
 gem 'sqlite3', '1.6.2'
 
 # RAILS_ENV=development bundle install
-gem 'the_role_api', path: 'vendor/the_role_api'
+gem 'the_role_api', path: '../the_role_api'
+gem 'to_slug_param', path: '../to_slug_param'
 
 # ~~~~~~~~~~~~~~~~~ TheRole ~~~~~~~~~~~~~~~~~
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.7', '>= 6.1.7.3'
+gem 'rails', '6.1.7.3'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'

@@ -19,6 +19,9 @@ services:
     working_dir: /home/lucky/rails6dummy
     volumes:
       - .:/home/lucky/rails6dummy
+      - ../the_role_api:/home/lucky/the_role_api
+      - ../to_slug_param:/home/lucky/to_slug_param
+      - ../gems:/usr/local/bundle/gems
     ports:
       - 3000:3000
     depends_on:
