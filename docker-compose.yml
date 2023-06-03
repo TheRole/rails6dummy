@@ -21,6 +21,7 @@ services:
       - .:/home/lucky/rails6dummy
       - ../the_role_api:/home/lucky/the_role_api
       - ../to_slug_param:/home/lucky/to_slug_param
+      - ../rspec_specs:/home/lucky/rspec_specs
       - ../gems:/usr/local/bundle/gems
     ports:
       - 3000:3000

@@ -11,6 +11,9 @@ module Rails6dummy
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    # Add to autoload paths an external folder with common Models, Controllres, Specs and so on
+    config.autoload_paths += Dir[Rails.root.join('../', 'rspec_specs', '_TEST_APP_', '**/')]
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
