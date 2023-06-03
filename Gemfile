@@ -47,6 +47,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '6.0.1'
+  gem 'factory_bot', '6.2.1'
 end
 
 group :development do
