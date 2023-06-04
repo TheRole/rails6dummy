@@ -19,7 +19,10 @@ module Rails6dummy
     config.factory_bot.definition_file_paths += Dir[Rails.root.join('../', 'rspec_specs', 'factories')]
 
     # External place for Migrations
-    config.paths['db/migrate'] = [Rails.root.join('../', 'rspec_specs', '_TEST_APP_', 'db', 'migrate').to_s]
+    config.paths['db/migrate'].push Rails.root.join('../', 'rspec_specs', '_TEST_APP_', 'db', 'migrate').to_s
+
+    # Add external routes
+    config.paths["config/routes.rb"].push Rails.root.join('../', 'rspec_specs', '_TEST_APP_', 'routes.rb')
 
     # Configuration for the application, engines, and railties goes here.
     #
