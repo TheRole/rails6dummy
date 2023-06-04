@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.1'
+# ruby '2.7.8'
+# ruby '3.2.1'
 
 # ~~~~~~~~~~~~~~~~~ TheRole ~~~~~~~~~~~~~~~~~
 gem 'devise', '4.9.2'
 
 gem 'pg', '1.5.3'
-# gem 'mysql2'
+gem 'mysql2'
 gem 'sqlite3', '1.6.2'
 
 # RAILS_ENV=development bundle install
@@ -38,7 +39,6 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
 
 gem "pry", " 0.14.2"
 
@@ -49,7 +49,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '6.0.1'
-  gem 'factory_bot', '6.2.1'
+  gem 'factory_bot_rails', '6.2.0'
+  gem 'faker', '3.2.0'
 end
 
 group :development do
@@ -73,3 +74,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "bootsnap", "~> 1.16"

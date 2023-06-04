@@ -15,7 +15,7 @@ services:
   rails:
     tty: true
     stdin_open: true
-    image: iamteacher/rails7:latest
+    image: iamteacher/rails6-base:arm64
     working_dir: /home/lucky/rails6dummy
     volumes:
       - .:/home/lucky/rails6dummy

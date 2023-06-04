@@ -12,7 +12,14 @@ module Rails6dummy
     config.load_defaults 6.1
 
     # Add to autoload paths an external folder with common Models, Controllres, Specs and so on
-    config.autoload_paths += Dir[Rails.root.join('../', 'rspec_specs', '_TEST_APP_', '**/')]
+    config.autoload_paths += Dir[Rails.root.join('../', 'rspec_specs', '_TEST_APP_', 'controllers', '**/')]
+    config.autoload_paths += Dir[Rails.root.join('../', 'rspec_specs', '_TEST_APP_', 'models', '**/')]
+
+    # External place for FactoryBot factories
+    config.factory_bot.definition_file_paths += Dir[Rails.root.join('../', 'rspec_specs', 'factories')]
+
+    # External place for Migrations
+    config.paths['db/migrate'] = [Rails.root.join('../', 'rspec_specs', '_TEST_APP_', 'db', 'migrate').to_s]
 
     # Configuration for the application, engines, and railties goes here.
     #
